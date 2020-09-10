@@ -9,5 +9,22 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|.jsx)$/,
+        exclude: /node_modules/,
+        exclude: ['babel-loader']
+      },
+      {
+        test: /\.(js|.jsx)$/,
+        exclude: /node_modules/,
+        exclude: ['eslint-loader']
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   }
 }

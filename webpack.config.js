@@ -11,16 +11,15 @@ module.exports = {
     contentBase: './dist'
   },
   module: {
-    rules: [
-      {
-        test: /\.(js|.jsx)$/,
+    rules: [ {
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        exclude: ['babel-loader']
+        use: ['babel-loader']
       },
       {
-        test: /\.(js|.jsx)$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        exclude: ['eslint-loader']
+        use: ['eslint-loader']
       }
     ]
   },
